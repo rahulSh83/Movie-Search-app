@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('Checkout Code') {
             steps {
-                git branch: 'master', url: 'https://github.com/rahulSh83/Movie-Search-app'
+                git branch: 'main', url: 'https://github.com/rahulSh83/Movie-Search-app'
             }
         }
 
