@@ -15,8 +15,8 @@ pipeline {
 
         stage('Build') {
             steps {
-                bat 'npm restore'
-                bat 'npm build --configuration Release'
+                bat 'npm install'
+                bat 'npm run build --configuration Release'
                 bat 'npm publish -c Release -o ./publish'
             }
         }
