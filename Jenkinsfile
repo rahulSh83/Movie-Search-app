@@ -15,9 +15,9 @@ pipeline {
 
         stage('Build') {
             steps {
-                bat 'dotnet restore'
-                bat 'dotnet build --configuration Release'
-                bat 'dotnet publish -c Release -o ./publish'
+                bat 'npm restore'
+                bat 'npm build --configuration Release'
+                bat 'npm publish -c Release -o ./publish'
             }
         }
 
