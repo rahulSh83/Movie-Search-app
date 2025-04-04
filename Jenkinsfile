@@ -7,17 +7,15 @@ pipeline {
     }
 
     stages {
-        stage('Checkout Code') {
+        stage('Install Dependencies') {
             steps {
-                git branch: 'main', url: 'https://github.com/rahulSh83/Movie-Search-app'
+                bat 'npm install'
             }
         }
 
         stage('Build') {
             steps {
-                bat 'npm install'
-                bat 'npm run build --configuration Release'
-                bat 'npm publish -c Release -o ./publish'
+                bat 'npm run build'
             }
         }
 
